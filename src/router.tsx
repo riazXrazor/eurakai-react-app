@@ -4,7 +4,6 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import Homepage from "./components/pages/Homepage/Homepage";
 import Layout from "./components/shared/Layout";
 import Loginpage from "./components/pages/Loginpage/Loginpage";
 import Pdfpage from "./components/pages/Pdfpage/Pdfpage";

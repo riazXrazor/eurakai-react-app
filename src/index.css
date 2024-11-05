@@ -15,7 +15,7 @@
     display: block;
   }
   .background-image-particle {
-    background-image: url("../assets/images/Particles.svg");
+    background-image: url("./assets/images/Particles.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center top 20rem;
