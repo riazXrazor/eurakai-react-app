@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import SignUpForm from "../../signup/signup-form";
-import Skeleton from "../../shared/skeleton";
-import boyAirplaneImg from "../../../assets/images/g1576.svg";
+import SignUpForm from '../../signup/signup-form';
+import Skeleton from '../../shared/skeleton';
+import boyAirplaneImg from '../../../assets/images/g1576.svg';
 
 export default function Signuppage() {
   const [openToSModal, setOpenToSModal] = useState(false);
   const [openPrivacyModal, setOpenPrivacyModal] = useState(false);
   const [hasTOSAgreed, setHasTOSAgreed] = useState(false);
-  const [err, setErr] = useState("");
-  const [token, setToken] = useState("");
+  const [err, setErr] = useState('');
+  const [token, setToken] = useState('');
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState<{
@@ -20,11 +20,11 @@ export default function Signuppage() {
     affiliation: string;
     google_jti?: string;
   }>({
-    email: "",
-    name: "",
-    password: "",
-    password2: "",
-    affiliation: "",
+    email: '',
+    name: '',
+    password: '',
+    password2: '',
+    affiliation: '',
   });
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,22 +37,22 @@ export default function Signuppage() {
 
     const passMatch = formData.password === formData.password2;
     if (!passMatch) {
-      setErr("Passwords do not match");
+      setErr('Passwords do not match');
     }
     if (formData.password.length < 8)
-      setErr("Password length should be atleast 8 characters");
+      setErr('Password length should be atleast 8 characters');
 
     if (!hasTOSAgreed) {
-      setErr("Please Read our Terms of Service and accept it to continue.");
+      setErr('Please Read our Terms of Service and accept it to continue.');
     }
 
     if (hasTOSAgreed && passMatch) {
       try {
         setLoading(true);
 
-        setErr("");
+        setErr('');
       } catch (err) {
-        setErr("You have already registered. Try signing in.");
+        setErr('You have already registered. Try signing in.');
         console.log(err);
       } finally {
         setLoading(false);
@@ -64,16 +64,16 @@ export default function Signuppage() {
     e.preventDefault();
 
     if (!hasTOSAgreed) {
-      setErr("Please Read our Terms of Service and accept it to continue.");
+      setErr('Please Read our Terms of Service and accept it to continue.');
     }
 
     if (hasTOSAgreed) {
       try {
         setLoading(true);
 
-        setErr("");
+        setErr('');
       } catch (err) {
-        setErr("You have already registered. Try signing in.");
+        setErr('You have already registered. Try signing in.');
         console.log(err);
       } finally {
         setLoading(false);
