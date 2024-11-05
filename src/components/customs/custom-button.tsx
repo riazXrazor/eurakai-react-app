@@ -1,6 +1,5 @@
 import { Button, ButtonProps, CustomFlowbiteTheme } from "flowbite-react";
 
-import React from "react";
 import { cn } from "../../lib/utils";
 
 export default function CustomButton(props: ButtonProps) {

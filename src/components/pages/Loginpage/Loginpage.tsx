@@ -2,8 +2,7 @@ import { useContext, useEffect, useState } from "react";
 
 import LoginForm from "../../login/login-form";
 import Skeleton from "../../shared/skeleton";
-
-// import girlSittingImg from "../../assets/images/girl-sitting.svg";
+import girlSittingImg from "../../../assets/images/girl-sitting.svg";
 
 function Loginpage() {
   const [error, setError] = useState("");
@@ -26,7 +25,7 @@ function Loginpage() {
     <Skeleton>
       <div className="flex w-full flex-row items-center justify-evenly h-full">
         <div className="flex w-1/5 flex-col items-start justify-center pb-[10%]">
-          {/* <img src={girlSittingImg} alt="girl-sitting" /> */}
+          <img src={girlSittingImg} alt="girl-sitting" />
           <div>
             <h1 className="font-lora text-6xl font-bold text-[#0449D1]">
               Sign in
